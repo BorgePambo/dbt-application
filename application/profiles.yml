@@ -1,0 +1,13 @@
+application:
+  outputs:
+    dev:
+      account: "{{ env_var('ACCOUNT') }}"
+      user: "{{ env_var('USER') }}"
+      password: "{{ env_var('PASSWORD') }}"
+      role: "{{ env_var('ROLE') }}"
+      database: "{{ env_var('DB_SNOWFLAKE') }}"
+      schema: STAGE
+      warehouse: COMPUTE_WH
+      threads: 1
+      type: snowflake
+  target: dev
