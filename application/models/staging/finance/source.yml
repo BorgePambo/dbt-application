@@ -1,0 +1,44 @@
+# version: 2
+
+# sources:
+#   - name: finance
+#     description: "Dados bruto de originação financeira"
+#     schema: stage
+#     loader: snowflake
+#     meta:
+#       owner: "Finance Team"
+#     freshness:
+#       warn_after: {count: 1, period: day}
+#       error_after: {count: 2, period: day}
+
+#     tables:
+#       - name: dados_financeiros
+#         description: "Dados bruto de originação financeira"
+#         columns:
+#           - name: id
+#             description: "Identificador único do registro"
+#             data_tests:
+#               - not_null
+#               - unique
+#           - name: nome
+#             description: "Nome do cliente"
+#           - name: data
+#             description: "Data de origem do registro"
+#           - name: valor
+#             description: "Valor financeiro relacionado ao registro"
+#           - name: status
+#             description: "Status do pagamento (ex: pago, pendente)"
+#           - name: banco
+#             description: "Instituição bancária associada"
+#           - name: destino
+#             description: "Destino do valor, se aplicável"
+#           - name: responsavel
+#             description: "Pessoa responsável pelo registro"
+#           - name: tipo
+#             description: "Tipo de transação financeira"
+#           - name: valor_real
+#             description: "Valor real após ajustes e impostos"
+#           - name: categoria
+#             description: "Categoria do gasto ou receita"
+#           - name: mes
+#             description: "Mês referente ao registro"
