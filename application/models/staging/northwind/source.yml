@@ -1,0 +1,39 @@
+version: 2
+
+
+sources:
+  - name: northwind
+    description: "Dados bruto de originação financeira"
+    schema: stage
+    loader: snowflake
+    meta:
+      owner: "Empresa XYZ"
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
+
+    tables:
+      - name: orders
+        description: "Tabela com dados de pedidos"
+        columns:
+          - name: order_id
+            tests:
+              - not_null
+              - unique
+          - name: customer_id
+          - name: employee_id
+          - name: order_date
+          - name: required_date
+          - name: shipped_date
+          - name: ship_via
+          - name: freight
+          - name: ship_name
+          - name: ship_address
+          - name: ship_city
+          - name: ship_region
+          - name: ship_postal_code
+          - name: ship_country
+          
+    
+
+      

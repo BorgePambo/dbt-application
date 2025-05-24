@@ -19,26 +19,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   application:
     staging:
-      +materialized: view  # cria view
-     
-
+      +materialized: view
+      +schema: staging
+      +enabled: true
 
     intermediate:
       +materialized: ephemeral
-      +tags: ['intermediate']
+      +schema: intermediate
       +enabled: true
 
     marts:
       +materialized: table
       +schema: marts
-      +tags: ['marts']
       +enabled: true
-
-seeds:
-  application:
-    +schema: seeds
-    +tags: ['seeds']
-    +enabled: true
-    delimiter: ";"
-    quote_columns: false
-

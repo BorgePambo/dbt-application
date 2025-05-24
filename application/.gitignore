@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+venv/
+.myvenv/
+target/
+dbt_packages/
+logs/
+=======
 
 target/
 dbt_packages/
 logs/
+>>>>>>> b3c74ab (Adiciona seeds, models, testes e docs do projeto dbt)
